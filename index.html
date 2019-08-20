@@ -1,0 +1,106 @@
+<title>Payment Processing</title>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/site">
+</head>
+<body>
+	<script src="script.js">
+	</script>
+
+<h2 id="payment">Enter Payment Information</h2>
+<form name="payment_form" onSubmit= "event.preventDefault(); return validateForm();">
+<div class="Payment">	
+
+	<label class="radii">
+	<input type="radio" id="credit" onClick = "updateForm(this)" checked="checked" name="radio" value="credit">
+		<img src="images/AmEx.png" alt="American Express" height="100"></img>
+		<img src="images/Discover.png" alt="Discover"  height="100"></img>
+		<img src="images/MasterCard.png" alt="MasterCard" height="100"></img>
+		<img src="images/Visa.png" alt="Visa" height="100"></img>
+		<span class="bullet">
+	</label>
+	
+	<label class="radii">
+	<input type="radio" id="paypal" onClick = "updateForm(this)" name="radio" value="paypal">
+		<img src="images/Paypal.png" alt="PayPal" height="50"></img>
+		<span class="bullet">
+	</label>
+	
+	<label for="first_name"><p id="first_name">First name:</p><input type="text" id="first_name_field" name="first_name"></label>
+	<label for="last_name"><p id="last_name">Last name:</p><input type="text" id="last_name_field" name="last_name"></label>
+	<label for="address"><p id="address">Address:</p><input type="text" id="address_field" name="address"></label>
+	<label for="city"><p id="city">City:</p><input type="text" id="city_field" name="city"></label>
+	<label for="zip"><p id="zip">Zip:</p><input type="text" id="zip_field" name="zip"></label>
+	<label for="email"><p id="email">Email Address:</p><input type="text" id="email_field" name="email"></label>
+	<label for="name_on_card"><p id="name_on_card">Name on Card:</p><input type="text" id="name_on_card_field" name="name_on_card"></label>
+	<label for="card_number"><p id="card_number">Card Number:</p><input type="text" id="card_number_field" name="card_number"></label>
+	<label for="cvc"><a href="https://en.wikipedia.org/wiki/Card_security_code" target="_blank"><p id="cvc">CVV2/CVC:</p></a><input type="text" id="cvc_field" name="cvc"></label><br />
+	
+	<label for="state"><p id="state">State: </p><select id="state_field">
+		<option value="Select State" selected>Select State<br /></option>
+		<option value="Alabama">Alabama</option>
+		<option value="Alaska">Alaska</option>
+		<option value="Arizona">Arizona</option>
+		<option value="Arkansas">Arkansas</option>
+		<option value="California">California</option>
+		<option value="Colorado">Colorado</option>
+		<option value="Connecticut">Connecticut</option>
+		<option value="Delaware">Delaware</option>
+		<option value="Florida">Florida</option>
+		<option value="Georgia">Georgia</option>
+		<option value="Hawaii">Hawaii</option>
+		<option value="Idaho">Idaho</option>
+		<option value="Illinois">Illinois</option>
+		<option value="Indiana">Indiana</option>
+		<option value="Iowa">Iowa</option>
+		<option value="Kansas">Kansas</option>
+		<option value="Kentucky">Kentucky</option>
+		<option value="Louisiana">Louisiana</option>
+		<option value="Maine">Maine</option>
+		<option value="Massachussetts">Massachussetts</option>
+		<option value="Michigan">Michigan</option>
+		<option value="Minnesota">Minnesota</option>
+		<option value="Mississippi">Mississippi</option>
+		<option value="Missouri">Missouri</option>
+		<option value="Montana">Montana</option>
+		<option value="Nebraska">Nebraska</option>
+		<option value="Nevada">Nevada</option>
+		<option value="New Hampshire">New Hampshire</option>
+		<option value="New Jersey">New Jersy</option>
+		<option value="New Mexico">New Mexico</option>
+		<option value="New York">New York</option>
+		<option value="North Carolina">North Carolina</option>
+		<option value="North Dakota">North Dakota</option>
+		<option value="Ohio">Ohio</option>
+		<option value="Oklahoma">Oklahoma</option>
+		<option value="Oregon">Oregon</option>
+		<option value="Pennsylvania">Pennsylvania</option>
+		<option value="Rhode Island">Rhode Island</option>
+		<option value="South Carolina">South Carolina</option>
+		<option value="South Dakota">South Dakota</option>
+		<option value="Tennessee">Tennessee</option>
+		<option value="Texas">Texas</option>
+		<option value="Utah">Utah</option>
+		<option value="Vermont">Vermont</option>
+		<option value="Virginia">Virginia</option>
+		<option value="Washington">Washington</option>
+		<option value="West Virginia">West Virginia</option>
+		<option value="Wisconsin">Wisconsin</option>
+		<option value="Wyoming">Wyoming</option>
+			</select></label><br />
+	
+	<label for="expiration_date"><p id="expiration_date">Expiration Date:</p><input type="date" name="expiration_date" id="expiration_date_field" min="2017-01-01" max="2020-12-31" value="2019-04-01"></label><br />
+
+	<label for="paypal_email"><p id="paypal_email">PayPal Email:</p><input type="text" id="paypal_email_field" name="paypal_email"></label><br />
+	<label for="paypal_password"><p id="paypal_password">Password:</p><input type="password" id="paypal_password_field" name="paypal_password"></label><br />
+
+
+	<label class="radio-inline">
+              <input type="image" value="Submit" id="pay_now" src="images/PayNow.png" alt="Pay Now"></img>
+	</label>
+	
+	<br /><a href="../index.html">ePortfolio</a><br />
+
+</div>
+</form>
+</body>
